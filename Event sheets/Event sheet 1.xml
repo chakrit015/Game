@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="score" sid="858239556311161" static="0" type="number">0</variable>
+        <event-block sid="585467371218196">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="218877053731665" type="Sprite" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="620481999007908" type="Sprite">
+                    <param id="0" name="X">42.998</param>
+                    <param id="1" name="Y">519.495</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="296967897448207">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="384247428138610" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="809795427167817" type="Audio">
+                    <param id="0" name="Audio file">Blazer Rail</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="376311666731024">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="950824521676953" type="Sprite">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="365221370024777" type="Audio">
+                    <param id="0" name="Audio file">กระดิ่ง 4 (online-audio-converter.com)</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">5</param>
+                    <param id="3" name="Object">Sprite3</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="712728253398443" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+                <action id="0" name="Set text" sid="675185248941147" type="Text">
+                    <param id="0" name="Text">&quot;&quot;&amp;score</param>
+                </action>
+                <action id="-9" name="Destroy" sid="668577952950251" type="Sprite3" />
+            </actions>
+        </event-block>
+        <event-block sid="268499349153417">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="473427279508252" type="Sprite">
+                    <param id="0" name="Object">Sprite4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="545830149990706" type="System">
+                    <param id="0" name="Layout">Game Over</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="245439651199990">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="325062491099583" type="Sprite">
+                    <param id="0" name="Object">Sprite8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="710950798545112" type="System">
+                    <param id="0" name="Layout">Win</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="299593143610435">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="979168216151951" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="939238329958597" type="Sprite">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="832145598335540">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="767988195519167" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="526913485909829" type="Sprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
